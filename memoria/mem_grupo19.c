@@ -37,13 +37,11 @@ static int my_proc_open(struct inode *inode, struct file *file) {
     return single_open(file, my_proc_show, NULL);
 }
 
-static struct file_operations my_fops={
-    .owner = THIS_MODULE,
-    .open = my_proc_open,
-    .release = single_release,
-    .read = seq_read,
-    .llseek = seq_lseek,
-    .write = my_proc_write
+static struct proc_ops my_fops={
+    .proc_open = my_proc_open,
+    .proc_release = single_release,
+    .proc_read = seq_read,
+    .proc_lseek = seq_lseek,
 };
 
 static int __init test_init(void) {
@@ -67,5 +65,5 @@ module_init(test_init);
 module_exit(test_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Jurgen Ramirez");
+MODULE_AUTHOR("Jurgen Ramirez | Marcos Santos | Edgar Guamuch");
 MODULE_DESCRIPTION("Muestra el porcentaje de Memoria utilizada");
