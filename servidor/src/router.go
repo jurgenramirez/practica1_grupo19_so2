@@ -15,10 +15,19 @@ type RAM struct {
 	RAMUsagePercent int `json:"ram_usage_percent"`
 }
 type Process struct {
-	PID       int    `json:"pid"`
-	Name      string `json:"name"`
-	State     int    `json:"state"`
-	PIDParent int    `json:"pid_parent"`
+	PID     int            `json:"pid"`
+	Name    string         `json:"nombre"`
+	State   int            `json:"estado"`
+	Ram     int            `json:"ram"`
+	Usuario int            `json:"usuario"`
+	Hijos   []ProcessChild `json:"hijos"`
+}
+type ProcessChild struct {
+	PID     int    `json:"pid"`
+	Name    string `json:"nombre"`
+	State   int    `json:"estado"`
+	Ram     int    `json:"ram"`
+	Usuario int    `json:"usuario"`
 }
 
 func GetRAM(c *fiber.Ctx) error {
