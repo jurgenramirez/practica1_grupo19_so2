@@ -13,8 +13,8 @@
 #define BUFSIZE         150
 
 MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Modulo de procesos y CPU");
-MODULE_AUTHOR("cpu_grupo19");
+MODULE_DESCRIPTION("CPU AND PROCESS");
+MODULE_AUTHOR("Hola mundo, somos el grupo 19 y este es el monitor cpu and process");
 struct task_struct *task_list;
 struct task_struct *task_list_child;
 struct list_head *list;
@@ -52,6 +52,7 @@ static int __init cpu_grupo19_init(void)
 {
     proc_create("cpu_grupo19", 0, NULL, &archivo_operaciones);
     printk(KERN_INFO "cpu_grupo19\n");
+    printk(KERN_INFO "Sayonara mundo, somos el grupo 19 y este fue el monitor cpu and process\n");
 
     return 0;
 }
@@ -60,6 +61,7 @@ static void __exit cpu_grupo19_cleanup(void)
 {
     remove_proc_entry("cpu_grupo19", NULL);    
     printk(KERN_INFO "Sistemas Operativos 2 - Grupo 19\n");
+    printk(KERN_INFO "Sayonara mundo, somos el grupo 19 y este fue el monitor cpu and process\n");
 }
 
 
