@@ -40,13 +40,13 @@ static int abrir_aproc(struct inode *inode, struct  file *file) {
 }
 
 
-static struct proc_ops archivo_operaciones =
+static struct file_operations archivo_operaciones =
 {    
-    .proc_open = abrir_aproc,
-    .proc_release = single_release,
-    .proc_read = seq_read,
-    .proc_lseek = seq_lseek,
+    .open = abrir_aproc,
+    .read = seq_read
 };
+
+
 
 static int __init cpu_grupo19_init(void)
 {
