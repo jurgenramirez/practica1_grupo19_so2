@@ -6,11 +6,7 @@
 #include <linux/init.h>
 #include <linux/kernel.h>      
 #include <linux/fs.h>
-#if LINUX_VERSION_CODE < KERNEL_VERSION(4,11,0)
 #include <linux/signal.h>
-#else
-#include <linux/sched/signal.h>
-#endif
 #include <linux/mm.h>
 
 #define BUFSIZE         150
