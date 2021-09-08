@@ -1,0 +1,1 @@
+cmd_/home/marcossantos/Escritorio/SO1_Proyecto1-master/SOPES2_PRACTICA1/practica1_grupo19_so2/cpu/modules.order := {   echo /home/marcossantos/Escritorio/SO1_Proyecto1-master/SOPES2_PRACTICA1/practica1_grupo19_so2/cpu/cpu_grupo19.ko; :; } | awk '!x[$$0]++' - > /home/marcossantos/Escritorio/SO1_Proyecto1-master/SOPES2_PRACTICA1/practica1_grupo19_so2/cpu/modules.order
