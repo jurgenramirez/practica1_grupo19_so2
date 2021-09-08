@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os/exec"
+	"strings"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -92,5 +93,9 @@ func RunCMD(name string, args ...string) (string, error) {
 		fmt.Println(err.Error())
 		return "", err
 	}
+
+	cadena := strings.ReplaceAll(string(stdout), ",]", "]")
+	cadena = strings.ReplaceAll(cadena, ",}", "}")
+	stdout = []byte(cadena)
 	return string(stdout), nil
 }
