@@ -1,0 +1,36 @@
+#a:hover{
+    color: white;   
+    transition: transform 1.0s;
+}
+
+.zoomMenu{
+    font-weight: bold;
+}
+
+.zoomMenu:hover{
+    transform: scale(1.1);
+    z-index: 100;    
+    background-color: #25bcff;
+    font-weight: bold;
+    color: white;   
+    box-shadow: rgba(60, 208, 228, 0.502) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+    transition: transform 0.5s;
+}
+
+.zoomMenu :hover{
+    font-weight: bold;
+    color: white;   
+}
+
+.submenu{
+    background-color:#7BD1E2 ;
+    color: white;
+}
+
+.submenu:hover{
+    background-color: #25bcff;
+    font-weight: bold;
+    color: white;   
+    box-shadow: rgba(60, 208, 228, 0.502) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+ 
+}
