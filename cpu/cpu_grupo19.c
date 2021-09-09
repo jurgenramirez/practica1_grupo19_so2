@@ -42,7 +42,7 @@ char * get_task_state(long state)
 static int escribir_a_proc(struct seq_file * file_proc, void *v) {       
 
     seq_printf(file_proc, "[");
-    for_each_process(task_list) {
+    for_each_process(task_list){
             seq_printf(file_proc,"{\"pid\":%d,\"nombre\":\"%s\",\"estado\":\"%s\",\"ram\":%ld,\"usuario\":%u,\"hijos\":[", task_list->pid,task_list->comm,get_task_state(task_list->state),(task_list->mm != NULL? get_mm_rss(task_list->mm): 0)/1024,(task_list->cred-> uid.val));
             list_for_each(list, &task_list->children){        
                 task_list_child = list_entry( list, struct task_struct, sibling );             
