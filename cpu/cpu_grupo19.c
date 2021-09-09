@@ -49,7 +49,7 @@ static struct file_operations archivo_operaciones =
 static int __init cpu_grupo19_init(void)
 {
     proc_create("cpu_grupo19", 0, NULL, &archivo_operaciones);
-    printk(KERN_INFO "Sayonara mundo, somos el grupo 19 y este fue el monitor cpu and process\n");
+    printk(KERN_INFO "Hola mundo, somos el grupo 19 y este fue el monitor cpu and process\n");
 
     return 0;
 }
