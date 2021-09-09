@@ -17,7 +17,7 @@ type RAM struct {
 type Process struct {
 	PID     int            `json:"pid"`
 	Name    string         `json:"nombre"`
-	State   int            `json:"estado"`
+	State   string         `json:"estado"`
 	Ram     int            `json:"ram"`
 	Usuario int            `json:"usuario"`
 	Hijos   []ProcessChild `json:"hijos"`
@@ -25,7 +25,7 @@ type Process struct {
 type ProcessChild struct {
 	PID     int    `json:"pid"`
 	Name    string `json:"nombre"`
-	State   int    `json:"estado"`
+	State   string    `json:"estado"`
 	Ram     int    `json:"ram"`
 	Usuario int    `json:"usuario"`
 }
